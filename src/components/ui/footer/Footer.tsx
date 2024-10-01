@@ -3,7 +3,6 @@ import { useNavbarStore } from '@/store/navbar-store';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  IoLocation,
   IoLocationOutline,
   IoLogoFacebook,
   IoLogoInstagram,
