@@ -1,7 +1,9 @@
-export default function Contacto() {
+import Contacto from '@/components/paginas/contacto/Contacto';
+
+export default function ContactoPage() {
   return (
-    <div>
-      <h1>Contacto</h1>
-    </div>
+    <>
+      <Contacto />
+    </>
   );
 }

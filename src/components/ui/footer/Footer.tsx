@@ -2,6 +2,8 @@
 import { useNavbarStore } from '@/store/navbar-store';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ReactElement } from 'react';
+
 import {
   IoLocationOutline,
   IoLogoFacebook,
@@ -9,6 +11,40 @@ import {
   IoLogoWhatsapp,
   IoMail,
 } from 'react-icons/io5';
+
+interface Links {
+  href: string;
+  title: string;
+  io: ReactElement;
+}
+
+const linksContacto: Links[] = [
+  {
+    href: 'https://www.instagram.com/amania.arquitectura/',
+    title: 'instagram.com/amania.arquitectura',
+    io: <IoLogoInstagram size={15} className='my-auto' />,
+  },
+  {
+    href: 'https://www.facebook.com/Amania.bioarquitectura',
+    title: 'facebook.com/Amania.bioarquitectura',
+    io: <IoLogoFacebook size={16} />,
+  },
+  {
+    href: 'mailto:amania.arquitectura@gmail.com',
+    title: 'amania.arquitectura@gmail.com',
+    io: <IoMail size={15} />,
+  },
+  {
+    href: 'https://wa.me/541160272552',
+    title: '+54 9 116-027-2552',
+    io: <IoLogoWhatsapp size={15} className='justify-self-start' />,
+  },
+  {
+    href: 'https://maps.app.goo.gl/4DAtnFsRNV5u3yKg8',
+    title: 'Av. de los Comechingones, X5199 Villa Amancay, Córdoba',
+    io: <IoLocationOutline size={15} />,
+  },
+];
 
 export const Footer = () => {
   const closeMenu = useNavbarStore((state) => state.closeMenu);
@@ -38,66 +74,19 @@ export const Footer = () => {
             <span>Contacto:</span>
           </div>
 
-          <div className='flex justify-center '>
-            <Link
-              href='https://www.instagram.com/amania.arquitectura/'
-              className='flex gap-2 m-1 text-gray-300 hover:text-gray-400'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <IoLogoInstagram size={15} className='my-auto' />
-              <span>instagram.com/amania.arquitectura</span>
-            </Link>
-          </div>
-          <div className='flex justify-center'>
-            <Link
-              href='https://www.facebook.com/Amania.bioarquitectura'
-              className='flex gap-2 m-1 text-gray-300 hover:text-gray-400'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <IoLogoFacebook size={16} />
-              <span>facebook.com/Amania.bioarquitectura</span>
-            </Link>
-          </div>
-          <div className='flex justify-center'>
-            <Link
-              href='mailto:amania.arquitectura@gmail.com'
-              className='flex gap-2 m-1 text-gray-300 hover:text-gray-400'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <IoMail size={15} />
-              <span>amania.arquitectura@gmail.com</span>
-            </Link>
-          </div>
-          <div className='flex justify-center'>
-            <Link
-              href='https://wa.me/541160272552'
-              className='flex gap-2 m-1 text-gray-300 hover:text-gray-400'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <IoLogoWhatsapp
-                size={15}
-                className='justify-self-start'
-              />
-              <span>+54 9 116-027-2552</span>
-            </Link>
-          </div>
-          <div className='flex justify-center'>
-            <Link
-              href='https://maps.app.goo.gl/4DAtnFsRNV5u3yKg8'
-              className='flex gap-2 m-1 text-gray-300 hover:text-gray-400'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <IoLocationOutline size={15} />
-              <span>
-                Av. de los Comechingones, X5199 Villa Amancay, Córdoba
-              </span>
-            </Link>
-          </div>
+          {linksContacto.map(({ href, title, io }) => (
+            <div className='flex justify-center' key={href}>
+              <Link
+                href={href}
+                className='flex gap-2 m-1 text-gray-300 hover:text-gray-400'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                {io}
+                <span>{title}</span>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </div>
