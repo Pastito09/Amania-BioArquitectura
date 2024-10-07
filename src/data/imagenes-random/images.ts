@@ -3,7 +3,7 @@ interface ImageProps {
   title: string;
 }
 
-export const Images = [
+export const Images: ImageProps[] = [
   {
     src: '/imagenes/a.jpg',
     title: 'a',

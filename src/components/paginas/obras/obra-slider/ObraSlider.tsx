@@ -51,7 +51,7 @@ export const ObraSlider = () => {
         speed={1500}
         loop
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[Navigation, Thumbs, Autoplay]}
+        modules={[FreeMode, Navigation, Thumbs, Autoplay]}
         className='mySwiper2'
       >
         {Images.map((image) => (
