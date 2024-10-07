@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import './styles.css';
+import Link from 'next/link';
 
 export const ObraCard = () => {
   return (
@@ -13,7 +14,7 @@ export const ObraCard = () => {
           className='object-contain  '
         />
       </div>
-      <div className='mx-1 md:mx-24 mt-8 flex-col text-sm col-span-2'>
+      <div className='mx-1 md:mx-24 mt-8 flex-col text-sm col-span-2 text-gray-300'>
         <h1>
           <span>Obra n° 1</span>
         </h1>
@@ -52,6 +53,13 @@ export const ObraCard = () => {
             molestias.
           </span>
         </p>
+        <Link href={'/obras/u'} className='hover:text-gray-100'>
+          <p className='mt-5 ms-5 font-medium'>
+            <span>
+              <em>Leer mas...</em>
+            </span>
+          </p>
+        </Link>
       </div>
     </div>
   );
