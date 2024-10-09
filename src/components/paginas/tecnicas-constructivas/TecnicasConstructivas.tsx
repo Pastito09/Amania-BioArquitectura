@@ -1,0 +1,24 @@
+import TecnicaCard from './TecnicaCard';
+
+export const TecnicasConstructivas = () => {
+  return (
+    <>
+      <div className='grid grid-cols-1 mt-10 gap-2 md:gap-5 mb-2'>
+        <h1 className='text-xl md:text-3xl mb-2 font-semibold antialiased text-slate-300 text-center'>
+          Las tecnicas constructivas con las que trabajamos
+          diariamente
+        </h1>
+        <hr />
+        <TecnicaCard />
+        <hr />
+        <TecnicaCard />
+        <hr />
+        <TecnicaCard />
+        <hr />
+        <TecnicaCard />
+      </div>
+    </>
+  );
+};
+
+export default TecnicasConstructivas;

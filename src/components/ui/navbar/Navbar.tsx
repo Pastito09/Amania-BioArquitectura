@@ -12,8 +12,8 @@ const paginas = [
     href: '/obras',
   },
   {
-    nombre: 'Detalles constructivos',
-    href: '/detalles-constructivos',
+    nombre: 'Técnicas constructivas',
+    href: '/tecnicas-constructivas',
   },
   {
     nombre: 'Planos',

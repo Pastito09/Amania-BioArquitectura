@@ -4,8 +4,9 @@ import HomePageSlider from './HomePageSlider';
 
 export const HomePage = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3 my-2 gap-2'>
-      <div className='content-center '>
+    <div className='grid grid-cols-1 md:grid-cols-3 my-2 gap-2 '>
+      <div className='col-span-1'>
+        {/*slider-container*/}
         {/* <Image
           src={'/interiorCasa.jpeg'}
           width={550}
