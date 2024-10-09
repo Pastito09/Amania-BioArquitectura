@@ -51,7 +51,7 @@ export const Footer = () => {
 
   return (
     <div
-      className='flex w-full justify-center text-center text-sm md:text-xs bg-gray-800 mt-auto'
+      className='flex w-full justify-center text-center text-sm md:text-xs bg-gray-800/75 mt-auto'
       onClick={closeMenu}
     >
       <div className='flex flex-col'>

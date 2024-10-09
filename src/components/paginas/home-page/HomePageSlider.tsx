@@ -51,7 +51,7 @@ export const HomePageSlider = () => {
               height={900}
               width={900}
               alt={image.title}
-              className='object-contain object-top  p-1 md:p-0'
+              className='object-contain object-top p-1 md:p-0'
               quality={100}
               priority={true}
             />
