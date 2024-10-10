@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Amania Bio Arquitectura",
-  description: "Página del estudio de arquitectura de la Arquitecta Ana Maria Zienka Hogan",
+  description: "Página del estudio de bio-arquitectura de la Arquitecta Ana Maria Zienka Hogan",
 };
 export default function RootLayout({
   children,
